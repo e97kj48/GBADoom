@@ -28,14 +28,14 @@ A port of prBoom to the GBA.
 
 
 ## Controls:  
-**Fire:** R 
-**Use / Sprint:** L
-**Walk / Strafe:** D-Pad
-**Turn / Aim:** A & B
-**Automap:** SELECT
-**Weapon up:** L + RIGHT
-**Weapon down:** L + LEFT
-**Menu:** Start
+**Fire:** R  
+**Use / Sprint:** L  
+**Walk / Strafe:** D-Pad  
+**Turn / Aim:** A & B  
+**Automap:** SELECT  
+**Weapon up:** L + RIGHT  
+**Weapon down:** L + LEFT  
+**Menu:** Start  
 
 ## Building:
 
