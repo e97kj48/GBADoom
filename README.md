@@ -24,37 +24,18 @@ A port of prBoom to the GBA.
 
 - Although it is based on prBoom, most of the engine enhancements (dehacked, limit removing etc) have been reverted back to Vanilla. This is either for memory or performance reasons. Sadly, NUTS.wad and Okuplok are right out!
 
-- No multiplayer. 
+- No multiplayer.  
 
-
-
-KippyKip is maintaining an upstream fork with new features and fixes. [KippyKip GBA fork](https://github.com/Kippykip/GBADoom)
-
-
-## Cheats:
-**Chainsaw:** L, UP, UP, LEFT, L, SELECT, SELECT, UP  
-**God mode:** UP, UP, DOWN, DOWN, LEFT, LEFT, RIGHT, RIGHT  
-**Ammo & Keys:** L, LEFT, R, RIGHT, SELECT,UP, SELECT, UP  
-**Ammo:** R, R, SELECT,R, SELECT,UP, UP, LEFT  
-**No Clipping:** UP, DOWN, LEFT, RIGHT, UP, DOWN, LEFT, RIGHT  
-**Invincibility:** A, B, L, R, L, R, SELECT, SELECT  
-**Berserk:** B, B, R, UP, A, A, R, B  
-**Invisibility:** A, A, SELECT,B, A, SELECT, L, B  
-**Auto-map:** L, SELECT,R, B, A, R, L, UP  
-**Lite-Amp Goggles:** DOWN,LEFT, R, LEFT, R, L, L, SELECT  
-**Exit Level:** LEFT,R, LEFT, L, B, LEFT, RIGHT, A  
-**Enemy Rockets (Goldeneye):** A, B, L, R, R, L, B, A  
-**Toggle FPS counter:** A, B, L, UP, DOWN, B, LEFT, LEFT  
 
 ## Controls:  
-**Fire:** B  
-**Use / Sprint:** A  
-**Walk:** D-Pad  
-**Strafe:** L & R  
-**Automap:** SELECT  
-**Weapon up:** A + R  
-**Weapon down:** A + L  
-**Menu:** Start  
+**Fire:** R 
+**Use / Sprint:** L
+**Walk / Strafe:** D-Pad
+**Turn / Aim:** A & B
+**Automap:** SELECT
+**Weapon up:** L + RIGHT
+**Weapon down:** L + LEFT
+**Menu:** Start
 
 ## Building:
 
