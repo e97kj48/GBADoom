@@ -2,7 +2,7 @@
 //const unsigned char gfx_stbar[6000] =
 
 //GBA Doom II's hud is 7680 bytes now.
-const unsigned char gfx_stbar[0] =
+const unsigned char gfx_stbar[0] = //changed this from 7680 to 0 so no graphic would load
 {
 /*93,
 97,99,97,98,99,100,100,100,101,99,99,97,100,100,100,101,
