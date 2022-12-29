@@ -55,7 +55,7 @@ A port of prBoom to the GBA.
 
 To build the GBA version, you will need DevKitArm. The easiest way to get up and running for Windows users is download the installer from here (https://github.com/devkitPro/installer/releases) and install the GBA dev components.
 
-You will also need to use GBAWadUtil, included in the "GBAWadUtil\" directory. Alternatively download the latest build from the main source: (https://github.com/doomhack/GbaWadUtil). Windows (x64) users can download the Binary release from the releases page.
+You will also need to use GBAWadUtil, included in the "GBAWadUtil\" directory.
 
 1) Download or Clone GBADoom source code.
 Extract the contents to a folder: (Eg: C:\DevKitPro\Projects\GBADoom)
@@ -64,18 +64,16 @@ Extract the contents to a folder: (Eg: C:\DevKitPro\Projects\GBADoom)
 Open a command prompt.
 Type the following:
 **GbaWadUtil.exe -in doom.wad -cfile doom.wad.c**
-And copy it to the **source\\iwad\\** directory.
+And copy the resulting .c file to the **source\\iwad\\** directory.
 Alternatively just run the **build_XXXX.bat** files and it'll create it in the source\iwad\ path.
 
 3) Open C:\DevKitPro\Projects\GBADoom\source\doom_iwad.h in text editor or code editor of your choice.
 4) Change the first line to #include "iwad/**yourfile**.c" e.g.
-#include "iwad/doom1.c"
+#include "iwad/miniwad.c"
 #include "iwad/doom.c"
 #include "iwad/doom2.c"
-#include "iwad/tnt.c"
-#include "iwad/plutonia.c"
 
-5) Run msys2.bat and type **make**
+5) Run msys2.bat
 You may need to edit the msys2.bat with notepad and change the path to go to your real "**msys2\msys2_shell.bat**" file within it if it doesn't work.
 
 6) The project should build GBADoom.gba and GBADoom.elf. It will take about 5 minutes or so. You may see a lot of warning messages on the screen. These are normal.
