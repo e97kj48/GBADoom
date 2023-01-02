@@ -425,7 +425,7 @@ static boolean ST_NeedUpdate()
             return true;
     }
 
-    return false;
+    return true;
 }
 
 void ST_Drawer(boolean statusbaron, boolean refresh)
@@ -511,10 +511,6 @@ static void ST_loadGraphics(boolean doload)
         // yellow #
         _g->arms[i][1] = (const patch_t *) _g->shortnum[i+2];
     }
-
-    // status bar background bits
-    _g->stbarbg = (const patch_t *) gfx_stbar;
-    _g->stbar_len = gfx_stbar_len;
 
     // face states
     facenum = 0;

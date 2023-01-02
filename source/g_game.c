@@ -80,21 +80,14 @@
 // controls (have defaults)
 //
 
-//const int     key_right = KEYD_RIGHT;
-//const int     key_left = KEYD_LEFT;
 const int     key_up = KEYD_UP;
 const int     key_down = KEYD_DOWN;
 const int     key_menu_right = KEYD_RIGHT;                                      // phares 3/7/98
-const int     key_menu_left = KEYD_LEFT;                                       //     |
-const int     key_menu_up = KEYD_UP;                                         //     V
+const int     key_menu_left = KEYD_LEFT;
+const int     key_menu_up = KEYD_UP;
 const int     key_menu_down = KEYD_DOWN;
-const int     key_menu_escape = KEYD_START;                                     //     |
+const int     key_menu_escape = KEYD_START;
 const int     key_menu_enter = KEYD_A;                                      // phares 3/7/98
-//const int     key_strafeleft = KEYD_L;
-//const int     key_straferight = KEYD_R;
-//Match Doom II GBA retail controls ~ Kippykip
-//const int     key_fire = KEYD_B; 
-//const int     key_use = KEYD_A;
 const int     key_speed = KEYD_A;
 const int     key_escape = KEYD_START;                           // phares 4/13/98
 const int     key_enter = KEYD_A;
@@ -113,7 +106,7 @@ const int     key_strafeleft = KEYD_LEFT;
 const int     key_straferight = KEYD_RIGHT;
 const int     key_fire = KEYD_R; 
 const int     key_use = KEYD_L;
-                                          // phares
+
 
 #define MAXPLMOVE   (forwardmove[1])
 #define SLOWTURNTICS  6

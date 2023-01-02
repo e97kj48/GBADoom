@@ -257,10 +257,10 @@ boolean highDetail = false;
 // Constants
 //*****************************************
 
-const int viewheight = SCREENHEIGHT-ST_SCALED_HEIGHT;
-const int centery = (SCREENHEIGHT-ST_SCALED_HEIGHT)/2;
+const int viewheight = SCREENHEIGHT;
+const int centery = SCREENHEIGHT/2;
 static const int centerxfrac = (SCREENWIDTH/2) << FRACBITS;
-static const int centeryfrac = ((SCREENHEIGHT-ST_SCALED_HEIGHT)/2) << FRACBITS;
+static const int centeryfrac = (SCREENHEIGHT/2) << FRACBITS;
 
 const fixed_t projection = (SCREENWIDTH/2) << FRACBITS;
 
@@ -276,7 +276,7 @@ static const fixed_t pspriteyiscale = ((UINT_MAX) / ((SCREENHEIGHT << FRACBITS) 
 static const angle_t clipangle = 537395200; //xtoviewangle[0];
 
 static const int skytexturemid = 100*FRACUNIT;
-static const fixed_t skyiscale = (FRACUNIT*200)/((SCREENHEIGHT-ST_HEIGHT)+16);
+static const fixed_t skyiscale = (FRACUNIT*200)/(SCREENHEIGHT+16);
 
 
 //********************************************

@@ -69,7 +69,7 @@ static const int mapcolor_sngl = 208;    // single player arrow color
 static const int map_secret_after = 0;
 
 static const int f_w = (SCREENWIDTH*2);
-static const int f_h = SCREENHEIGHT-ST_SCALED_HEIGHT;// to allow runtime setting of width/height
+static const int f_h = SCREENHEIGHT;// to allow runtime setting of width/height
 
 
 
