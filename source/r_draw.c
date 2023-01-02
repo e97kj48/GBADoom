@@ -98,5 +98,5 @@ void R_InitBuffer()
         negonearray[i] = -1;
 
     for(int i = 0; i < 120; i++)
-        screenheightarray[i] = 160;
+        screenheightarray[i] = 160; // 128 for normal stbar, 160 for full screen weapon ~e9
 }
