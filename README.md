@@ -4,8 +4,6 @@ A port of prBoom to the GBA.
 
 **What's hot?**
 
-- Supports Doom Shareware, Retail, Ultimate and Doom2 IWADS.
-
 - Renderer is largely intact. Z-Depth lighting is gone and there is mip-mapping but it's otherwise complete.
 
 - Monster behaviour is all intact. (I.e sound propagation etc.)
