@@ -99,7 +99,7 @@
 
 // proff 08/18/98: Changed for high-res
 #define ST_FACESX               (ST_X+104)
-#define ST_FACESY               (ST_Y)
+#define ST_FACESY               (ST_Y-48)
 
 #define ST_EVILGRINCOUNT        (2*TICRATE)
 //Fix Status bar face timing ~Kippykip
