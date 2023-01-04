@@ -390,42 +390,7 @@ static void ST_doRefresh(void)
 
 static boolean ST_NeedUpdate()
 {
-	// ready weapon ammo
-	if(_g->w_ready.oldnum != *_g->w_ready.num)
-        return true;
-	
-    if(_g->st_health.n.oldnum != *_g->st_health.n.num)
-        return true;
-
-    if(_g->st_armor.n.oldnum != *_g->st_armor.n.num)
-        return true;
-
-    if(_g->w_faces.oldinum != *_g->w_faces.inum)
-        return true;
-	
-	// ammo
-    for(int i=0; i<4; i++)
-    {
-        if(_g->w_ammo[i].oldnum != *_g->w_ammo[i].num)
-            return true;
-		if(_g->w_maxammo[i].oldnum != *_g->w_maxammo[i].num)
-            return true;
-    }
-
-    // weapons owned
-    for(int i=0; i<6; i++)
-    {
-        if(_g->w_arms[i].oldinum != *_g->w_arms[i].inum)
-            return true;
-    }
-
-    for(int i = 0; i < 3; i++)
-    {
-        if(_g->w_keyboxes[i].oldinum != *_g->w_keyboxes[i].inum)
-            return true;
-    }
-
-    return true;
+    return true; // Makes status bar update constantly to keep on screen without background
 }
 
 void ST_Drawer(boolean statusbaron, boolean refresh)

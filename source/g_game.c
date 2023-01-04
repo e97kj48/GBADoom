@@ -1145,6 +1145,7 @@ static const char *defdemoname;
 
 void G_DeferedPlayDemo (const char* name)
 {
+    return; //Disables playing demos in menu
     defdemoname = name;
     _g->gameaction = ga_playdemo;
 }

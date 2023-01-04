@@ -276,7 +276,7 @@ static const fixed_t pspriteyiscale = ((UINT_MAX) / ((SCREENHEIGHT << FRACBITS) 
 static const angle_t clipangle = 537395200; //xtoviewangle[0];
 
 static const int skytexturemid = 100*FRACUNIT;
-static const fixed_t skyiscale = (FRACUNIT*200)/(SCREENHEIGHT+16);
+static const fixed_t skyiscale = (FRACUNIT*200)/(SCREENHEIGHT); // changed "SCREENHEIGHT+16" to just "SCREENHEIGHT" ~e9
 
 
 //********************************************
