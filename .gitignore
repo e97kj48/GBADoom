@@ -7,6 +7,7 @@
 *.elf
 *.gba
 *.sav
+*.png
 ~$GBADoomMemory.xlsx
 .qtc_clangd/
 build/

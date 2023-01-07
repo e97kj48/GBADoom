@@ -42,7 +42,6 @@
 // Size of statusbar.
 // Now sensitive for scaling.
 
-// proff 08/18/98: Changed for high-res
 #define ST_HEIGHT 32
 #define ST_WIDTH  320
 #define ST_Y      (160 - ST_HEIGHT)
@@ -68,7 +67,6 @@
 #define ST_X                    0
 #define ST_X2                   104
 
-// proff 08/18/98: Changed for high-res
 #define ST_FX                   (ST_X+143)
 #define ST_FY                   (ST_Y+1)
 
@@ -97,7 +95,6 @@
 #define ST_GODFACE              (ST_NUMPAINFACES*ST_FACESTRIDE)
 #define ST_DEADFACE             (ST_GODFACE+1)
 
-// proff 08/18/98: Changed for high-res
 #define ST_FACESX               (ST_X+103)
 #define ST_FACESY               (ST_Y-64)
 
@@ -122,23 +119,18 @@
 
 // AMMO number pos.
 #define ST_AMMOWIDTH            3
-// proff 08/18/98: Changed for high-res
 #define ST_AMMOX                (ST_X+32)
-#define ST_AMMOY                (ST_Y+6)
-//#define ST_AMMOX                44
-//#define ST_AMMOY                171
+#define ST_AMMOY                (ST_Y-122)
 
 // HEALTH number pos.
 #define ST_HEALTHWIDTH          3
-// proff 08/18/98: Changed for high-res
-#define ST_HEALTHX              (ST_X+66)
-#define ST_HEALTHY              (ST_Y+6)
+#define ST_HEALTHX              (ST_X+186)
+#define ST_HEALTHY              (ST_Y-106)
 
 
 // Weapon pos.
-// proff 08/18/98: Changed for high-res
 #define ST_ARMSX                (ST_X+82)
-#define ST_ARMSY                (ST_Y+4)
+#define ST_ARMSY                (ST_Y-106)
 #define ST_ARMSBGX              (ST_X+104)
 #define ST_ARMSBGY              (ST_Y)
 
@@ -146,7 +138,6 @@
 #define ST_ARMSYSPACE           10
 
 // Frags pos.
-// proff 08/18/98: Changed for high-res
 #define ST_FRAGSX               (ST_X+138)
 #define ST_FRAGSY               (ST_Y+3)
 //#define ST_FRAGSX               138
@@ -155,25 +146,21 @@
 
 // ARMOR number pos.
 #define ST_ARMORWIDTH           3
-// proff 08/18/98: Changed for high-res
-#define ST_ARMORX               (ST_X+166)
-#define ST_ARMORY               (ST_Y+6)
+#define ST_ARMORX               (ST_X+186)
+#define ST_ARMORY               (ST_Y-122)
 
 
 // Key icon positions.
 #define ST_KEY0WIDTH            8
 #define ST_KEY0HEIGHT           5
-// proff 08/18/98: Changed for high-res
 #define ST_KEY0X                (ST_X+178)
 #define ST_KEY0Y                (ST_Y+3)
 
 #define ST_KEY1WIDTH            ST_KEY0WIDTH
-// proff 08/18/98: Changed for high-res
 #define ST_KEY1X                (ST_X+178)
 #define ST_KEY1Y                (ST_Y+13)
 
 #define ST_KEY2WIDTH            ST_KEY0WIDTH
-// proff 08/18/98: Changed for high-res
 #define ST_KEY2X                (ST_X+178)
 #define ST_KEY2Y                (ST_Y+23)
 
@@ -181,22 +168,18 @@
 // Ammunition counter.
 #define ST_AMMO0WIDTH           3
 #define ST_AMMO0HEIGHT          6
-// proff 08/18/98: Changed for high-res
 #define ST_AMMO0X               (ST_X+220)
 #define ST_AMMO0Y               (ST_Y+5)
 
 #define ST_AMMO1WIDTH           ST_AMMO0WIDTH
-// proff 08/18/98: Changed for high-res
 #define ST_AMMO1X               (ST_X+220)
 #define ST_AMMO1Y               (ST_Y+11)
 
 #define ST_AMMO2WIDTH           ST_AMMO0WIDTH
-// proff 08/18/98: Changed for high-res
 #define ST_AMMO2X               (ST_X+220)
 #define ST_AMMO2Y               (ST_Y+23)
 
 #define ST_AMMO3WIDTH           ST_AMMO0WIDTH
-// proff 08/18/98: Changed for high-res
 #define ST_AMMO3X               (ST_X+220)
 #define ST_AMMO3Y               (ST_Y+17)
 
@@ -205,22 +188,18 @@
 // Only needed because backpack exists.
 #define ST_MAXAMMO0WIDTH        3
 #define ST_MAXAMMO0HEIGHT       5
-// proff 08/18/98: Changed for high-res
 #define ST_MAXAMMO0X            (ST_X+238)
 #define ST_MAXAMMO0Y            (ST_Y+5)
 
 #define ST_MAXAMMO1WIDTH        ST_MAXAMMO0WIDTH
-// proff 08/18/98: Changed for high-res
 #define ST_MAXAMMO1X            (ST_X+238)
 #define ST_MAXAMMO1Y            (ST_Y+11)
 
 #define ST_MAXAMMO2WIDTH        ST_MAXAMMO0WIDTH
-// proff 08/18/98: Changed for high-res
 #define ST_MAXAMMO2X            (ST_X+238)
 #define ST_MAXAMMO2Y            (ST_Y+23)
 
 #define ST_MAXAMMO3WIDTH        ST_MAXAMMO0WIDTH
-// proff 08/18/98: Changed for high-res
 #define ST_MAXAMMO3X            (ST_X+238)
 #define ST_MAXAMMO3Y            (ST_Y+17)
 

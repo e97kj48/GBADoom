@@ -82,14 +82,14 @@
 
 const int     key_up = KEYD_UP;
 const int     key_down = KEYD_DOWN;
-const int     key_menu_right = KEYD_RIGHT;                                      // phares 3/7/98
+const int     key_menu_right = KEYD_RIGHT;
 const int     key_menu_left = KEYD_LEFT;
 const int     key_menu_up = KEYD_UP;
 const int     key_menu_down = KEYD_DOWN;
 const int     key_menu_escape = KEYD_START;
-const int     key_menu_enter = KEYD_A;                                      // phares 3/7/98
+const int     key_menu_enter = KEYD_A;
 const int     key_speed = KEYD_A;
-const int     key_escape = KEYD_START;                           // phares 4/13/98
+const int     key_escape = KEYD_START;
 const int     key_enter = KEYD_A;
 const int     key_map_right = KEYD_RIGHT;
 const int     key_map_left = KEYD_LEFT;
