@@ -70,10 +70,6 @@
 #define ST_FX                   (ST_X+143)
 #define ST_FY                   (ST_Y+1)
 
-// Should be set to patch width
-//  for tall numbers later on
-#define ST_TALLNUMWIDTH         (tallnum[0]->width)
-
 // Number of status faces.
 #define ST_NUMPAINFACES         5
 #define ST_NUMSTRAIGHTFACES     3
@@ -108,47 +104,32 @@
 
 #define ST_MUCHPAIN             20
 
-// Location and size of statistics,
-//  justified according to widget type.
-// Problem is, within which space? STbar? Screen?
-// Note: this could be read in by a lump.
-//       Problem is, is the stuff rendered
-//       into a buffer,
-//       or into the frame buffer?
-// I dunno, why don't you go and find out!!!  killough
+// Location and size of widgets, from the top left of the screen
 
-// AMMO number pos.
-#define ST_AMMOWIDTH            3
-#define ST_AMMOX                (ST_X+32)
-#define ST_AMMOY                (ST_Y-122)
+// AMMO number position (top right)
+#define ST_AMMOWIDTH            3                   // Number of digits
+#define ST_AMMOX                34
+#define ST_AMMOY                4
 
-// HEALTH number pos.
-#define ST_HEALTHWIDTH          3
-#define ST_HEALTHX              (ST_X+186)
-#define ST_HEALTHY              (ST_Y-106)
+// HEALTH number position (top right)
+#define ST_HEALTHWIDTH          3                   // Number of digits
+#define ST_HEALTHX              236
+#define ST_HEALTHY              4
 
+// ARMOR number position (top right)
+#define ST_ARMORWIDTH           3                   // Number of digits
+#define ST_ARMORX               236
+#define ST_ARMORY               22
 
-// Weapon pos.
-#define ST_ARMSX                (ST_X+82)
-#define ST_ARMSY                (ST_Y-106)
-#define ST_ARMSBGX              (ST_X+104)
-#define ST_ARMSBGY              (ST_Y)
-
-#define ST_ARMSXSPACE           8
-#define ST_ARMSYSPACE           10
+// Weapons owned position (top left)
+#define ST_ARMSX                78
+#define ST_ARMSY                4
+#define ST_ARMSXSPACE           16                   // Space between sprites
 
 // Frags pos.
 #define ST_FRAGSX               (ST_X+138)
 #define ST_FRAGSY               (ST_Y+3)
-//#define ST_FRAGSX               138
-//#define ST_FRAGSY               171
 #define ST_FRAGSWIDTH           2
-
-// ARMOR number pos.
-#define ST_ARMORWIDTH           3
-#define ST_ARMORX               (ST_X+186)
-#define ST_ARMORY               (ST_Y-122)
-
 
 // Key icon positions.
 #define ST_KEY0WIDTH            8
@@ -165,45 +146,55 @@
 #define ST_KEY2Y                (ST_Y+23)
 
 
-// Ammunition counter.
+// Ammunition counter positions (top right)
+// Bullet (Pistol) counter pos
 #define ST_AMMO0WIDTH           3
 #define ST_AMMO0HEIGHT          6
-#define ST_AMMO0X               (ST_X+220)
-#define ST_AMMO0Y               (ST_Y+5)
+#define ST_AMMO0X               86
+#define ST_AMMO0Y               16
 
+// Shell counter pos
 #define ST_AMMO1WIDTH           ST_AMMO0WIDTH
-#define ST_AMMO1X               (ST_X+220)
-#define ST_AMMO1Y               (ST_Y+11)
+#define ST_AMMO1X               102
+#define ST_AMMO1Y               16
 
+// Bullet (Chaingun) counter pos
+#define ST_AMMO4X               118
+#define ST_AMMO4Y               16
+
+// Cell (Plasma cannon) counter pos
 #define ST_AMMO2WIDTH           ST_AMMO0WIDTH
-#define ST_AMMO2X               (ST_X+220)
-#define ST_AMMO2Y               (ST_Y+23)
+#define ST_AMMO2X               150
+#define ST_AMMO2Y               16
 
+// Rocket counter pos
 #define ST_AMMO3WIDTH           ST_AMMO0WIDTH
-#define ST_AMMO3X               (ST_X+220)
-#define ST_AMMO3Y               (ST_Y+17)
+#define ST_AMMO3X               134
+#define ST_AMMO3Y               16
+
+// Cell (BFG9000) counter pos
+#define ST_AMMO5X               166
+#define ST_AMMO5Y               16
 
 
-// Indicate maximum ammunition.
-// Only needed because backpack exists.
-#define ST_MAXAMMO0WIDTH        3
-#define ST_MAXAMMO0HEIGHT       5
-#define ST_MAXAMMO0X            (ST_X+238)
-#define ST_MAXAMMO0Y            (ST_Y+5)
+// Health icon position (top right)
+#define ST_MAXAMMO0WIDTH        1
+#define ST_MAXAMMO0X            206
+#define ST_MAXAMMO0Y            4
 
+// Armor icon position
 #define ST_MAXAMMO1WIDTH        ST_MAXAMMO0WIDTH
-#define ST_MAXAMMO1X            (ST_X+238)
-#define ST_MAXAMMO1Y            (ST_Y+11)
+#define ST_MAXAMMO1X            206
+#define ST_MAXAMMO1Y            22
 
+// Ammo icon postition
 #define ST_MAXAMMO2WIDTH        ST_MAXAMMO0WIDTH
-#define ST_MAXAMMO2X            (ST_X+238)
-#define ST_MAXAMMO2Y            (ST_Y+23)
+#define ST_MAXAMMO2X            44
+#define ST_MAXAMMO2Y            4
 
 #define ST_MAXAMMO3WIDTH        ST_MAXAMMO0WIDTH
-#define ST_MAXAMMO3X            (ST_X+238)
-#define ST_MAXAMMO3Y            (ST_Y+17)
-
-
+#define ST_MAXAMMO3X            238
+#define ST_MAXAMMO3Y            133
 
 
 //

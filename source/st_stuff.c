@@ -285,7 +285,6 @@ static void ST_updateWidgets(void)
     else
         _g->w_ready.num = &_g->player.ammo[weaponinfo[_g->player.readyweapon].ammo];
 
-
     // update keycard multiple widgets
     for (i=0;i<3;i++)
     {
@@ -359,7 +358,7 @@ static void ST_drawWidgets(boolean refresh)
     STlib_updateNum(&_g->w_ready, CR_RED, refresh);
 	
 	// Restore the ammo numbers for backpack stats I guess, etc ~Kippykip
-	for (int i=0;i<4;i++)
+	for (int i=0;i<6;i++)
     {
 		STlib_updateNum(&_g->w_ammo[i], CR_DEFAULT, refresh);
 		STlib_updateNum(&_g->w_maxammo[i], CR_DEFAULT, refresh);
@@ -446,7 +445,15 @@ static void ST_loadGraphics(boolean doload)
     // Load the numbers, tall and short, from the WAD
     for (i=0;i<10;i++)
     {
-        //sprintf(namebuf, "STTNUM%d", i);
+        
+        // Icon "numbers" for HUD use
+        sprintf(namebuf, "STTICO%d", i);
+        _g->iconnum[i] = (const patch_t*) W_CacheLumpName(namebuf);
+
+        // Backpack ammo numbers
+        sprintf(namebuf, "STYZNUM%d", i);
+        _g->bammnum[i] = (const patch_t*)W_CacheLumpName(namebuf);
+
 		sprintf(namebuf, "STTNUM%d", i);
         _g->tallnum[i] = (const patch_t *) W_CacheLumpName(namebuf);
 
@@ -456,7 +463,7 @@ static void ST_loadGraphics(boolean doload)
 
     // Load percent key.
     //Note: why not load STMINUS here, too?
-    _g->tallpercent = (const patch_t*) W_CacheLumpName("STTPRCNT");
+    _g->tallpercent = (const patch_t *) W_CacheLumpName("STTPRCNT");
 
     // key cards
     for (i=0;i<NUMCARDS;i++)
@@ -522,6 +529,11 @@ static void ST_initData(void)
 
     _g->st_oldhealth = -1;
 
+    _g->st_icon[0] = 0;
+    _g->st_icon[1] = 1;
+    _g->st_icon[2] = 2;
+    _g->st_icon[3] = 3;
+
     for (i=0;i<NUMWEAPONS;i++)
         _g->oldweaponsowned[i] = _g->player.weaponowned[i];
 
@@ -562,15 +574,16 @@ static void ST_createWidgets(void)
 			&_g->st_statusbaron, _g->tallpercent);
 
     // weapons owned
+    // 2:Pistol, 3:Shotgun, 4:Chaingun, 5:Rocket launcher, 6: Plasma gun, 7: BFG9000
     for(i=0;i<6;i++)
     {
         STlib_initMultIcon(&_g->w_arms[i],
-			ST_ARMSX+(i%3)*ST_ARMSXSPACE,
-			ST_ARMSY+(i/3)*ST_ARMSYSPACE,
+			ST_ARMSX+(i%6)*ST_ARMSXSPACE,
+			ST_ARMSY,
             _g->arms[i], (int*) &_g->player.weaponowned[i+1],
 			&_g->st_statusbaron);
     }
-	
+
     // keyboxes 0-2
     STlib_initMultIcon(&_g->w_keyboxes[0],
             ST_KEY0X,
@@ -594,70 +607,93 @@ static void ST_createWidgets(void)
             &_g->st_statusbaron);			
 			
 	// ammo count (all four kinds)
+    // Bullet (Pistol)
 	STlib_initNum(&_g->w_ammo[0],
-			ST_AMMO0X,
-			ST_AMMO0Y,
-			_g->shortnum,
+            ST_AMMO0X,
+            ST_AMMO0Y,
+			_g->bammnum,
             &_g->player.ammo[0],
 			&_g->st_statusbaron,
 			ST_AMMO0WIDTH);
 
+    // Shell (Shotgun, Super shotgun)
 	STlib_initNum(&_g->w_ammo[1],
 			ST_AMMO1X,
 			ST_AMMO1Y,
-			_g->shortnum,
+			_g->bammnum,
             &_g->player.ammo[1],
 			&_g->st_statusbaron,
 			ST_AMMO1WIDTH);
 
+    // Bullet (Chaingun)
+    STlib_initNum(&_g->w_ammo[4],
+            ST_AMMO4X,
+            ST_AMMO4Y,
+            _g->bammnum,
+            &_g->player.ammo[0],
+            &_g->st_statusbaron,
+            ST_AMMO0WIDTH);
+
+    // Cell (Plasma gun)
 	STlib_initNum(&_g->w_ammo[2],
 			ST_AMMO2X,
 			ST_AMMO2Y,
-			_g->shortnum,
+			_g->bammnum,
             &_g->player.ammo[2],
 			&_g->st_statusbaron,
 			ST_AMMO2WIDTH);
 
+    // Rocket (Rocket Launcher)
 	STlib_initNum(&_g->w_ammo[3],
 			ST_AMMO3X,
 			ST_AMMO3Y,
-			_g->shortnum,
+			_g->bammnum,
             &_g->player.ammo[3],
 			&_g->st_statusbaron,
 			ST_AMMO3WIDTH);
 
-	// max ammo count (all four kinds)
+    // Cell (BFG9000)
+    STlib_initNum(&_g->w_ammo[5],
+            ST_AMMO5X,
+            ST_AMMO5Y,
+            _g->bammnum,
+            &_g->player.ammo[2],
+            &_g->st_statusbaron,
+            ST_AMMO2WIDTH);
+
+	// HUD icons 0-3
 	STlib_initNum(&_g->w_maxammo[0],
 			ST_MAXAMMO0X,
 			ST_MAXAMMO0Y,
-			_g->shortnum,
-            &_g->player.maxammo[0],
+			_g->iconnum,
+            &_g->st_icon[0],
 			&_g->st_statusbaron,
 			ST_MAXAMMO0WIDTH);
 
 	STlib_initNum(&_g->w_maxammo[1],
 			ST_MAXAMMO1X,
 			ST_MAXAMMO1Y,
-			_g->shortnum,
-            &_g->player.maxammo[1],
+			_g->iconnum,
+            &_g->st_icon[1],
 			&_g->st_statusbaron,
 			ST_MAXAMMO1WIDTH);
 
 	STlib_initNum(&_g->w_maxammo[2],
 			ST_MAXAMMO2X,
 			ST_MAXAMMO2Y,
-			_g->shortnum,
-            &_g->player.maxammo[2],
+			_g->iconnum,
+            &_g->st_icon[2],
 			&_g->st_statusbaron,
 			ST_MAXAMMO2WIDTH);
 
-	STlib_initNum(&_g->w_maxammo[3],
-			ST_MAXAMMO3X,
-			ST_MAXAMMO3Y,
-			_g->shortnum,
-            &_g->player.maxammo[3],
-			&_g->st_statusbaron,
-			ST_MAXAMMO3WIDTH);
+    // Unused 4th HUD icon ~e9
+//	STlib_initNum(&_g->w_maxammo[3],
+//			ST_MAXAMMO3X,
+//			ST_MAXAMMO3Y,
+//			_g->iconnum,
+//            &_g->st_icon[3],
+//			&_g->st_statusbaron,
+//			ST_MAXAMMO3WIDTH);
 			
     // faces
     STlib_initMultIcon(&_g->w_faces,

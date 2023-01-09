@@ -676,6 +676,12 @@ boolean mus_paused;
 
 unsigned int st_needrefresh;
 
+// 0-9, icon numbers
+const patch_t* iconnum[10];
+
+// 0-9, backpack ammo numbers
+const patch_t* bammnum[10];
+
 // 0-9, tall numbers
 const patch_t* tallnum[10];
 
@@ -693,7 +699,6 @@ const patch_t* faces[ST_NUMFACES];
 //e6y: status bar background
 const patch_t* stbarbg;
 unsigned int stbar_len;
-
 
 // weapon ownership patches
 const patch_t* arms[6][2];
@@ -714,10 +719,10 @@ st_multicon_t w_faces;
 st_multicon_t w_keyboxes[3];
 
 // ammo widgets
-st_number_t w_ammo[4];
+st_number_t w_ammo[6];
 
 // max ammo widgets
-st_number_t w_maxammo[4];
+st_number_t w_maxammo[6];
 
 // armor widget
 st_percent_t  st_armor;
@@ -741,6 +746,9 @@ int      keyboxes[3];
 int      st_randomnumber;
 
 int st_palette;
+
+// test graphic
+int		st_icon[4];
 
 // whether left-side main status bar is active
 boolean st_statusbaron;
