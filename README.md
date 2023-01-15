@@ -37,7 +37,7 @@ A port of prBoom to the GBA.
 **Lite-Amp Goggles:** DOWN,LEFT, R, LEFT, R, L, L, SELECT  
 **Exit Level:** LEFT,R, LEFT, L, B, LEFT, RIGHT, A  
 **Enemy Rockets (Goldeneye):** A, B, L, R, R, L, B, A  
-**Toggle FPS counter:** A, B, L, UP, DOWN, B, LEFT, LEFT
+**Toggle FPS counter:** LEFT, LEFT, LEFT, LEFT, LEFT, LEFT, LEFT, A  
 
 ## Controls:  
 **Fire:** R  

@@ -672,7 +672,7 @@ static void D_DoomMainSetup(void)
 
     lprintf(LO_ALWAYS, "It comes with ABSOLUTELY\nNO WARRANTY.\nSee the file COPYING for\ndetails.");
 
-    lprintf(LO_ALWAYS, "\nPhew. Thats the nasty legal\nstuff out of the way.\nLets play Doom!\n");
+    lprintf(LO_ALWAYS, "\nPhew. Thats the nasty legal\nstuff out of the way.\nLets play!\n");
 
 
 
@@ -695,7 +695,7 @@ static void D_DoomMainSetup(void)
     M_Init();
 
     //jff 9/3/98 use logical output routine
-    lprintf(LO_INFO,"R_Init: DOOM refresh daemon.");
+    lprintf(LO_INFO,"R_Init: Game refresh daemon.");
     R_Init();
 
     //jff 9/3/98 use logical output routine
