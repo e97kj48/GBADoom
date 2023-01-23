@@ -1527,7 +1527,7 @@ const mobjinfo_t mobjinfo[NUMMOBJTYPES] = {
     100,    // mass
     0,    // damage
     sfx_bgact,    // activesound
-    MF_SOLID|MF_SHOOTABLE|MF_COUNTKILL, // killough |MF_TRANSLUCENT,   // flags     // phares
+    MF_SOLID|MF_SHOOTABLE|MF_COUNTKILL|MF_FRIEND, // killough |MF_TRANSLUCENT,   // flags     // phares
     S_TROO_RAISE1   // raisestate
   },
 

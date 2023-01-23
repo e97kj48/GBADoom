@@ -207,9 +207,10 @@
 #define MF_POOLED      (unsigned int)(0x0000000010000000)
 #define MF_UNUSED       (unsigned int)(0x0000000020000000)
 
-    // Translucent sprite?                                          // phares
+// Translucent sprite?                                          // phares
 #define MF_TRANSLUCENT  (unsigned int)(0x0000000040000000)
 
+// A friend of the player.
 #define MF_FRIEND       (unsigned int)(0x0000000080000000)
 
 // killough 9/15/98: Same, but internal flags, not intended for .deh
