@@ -1,1 +1,0 @@
-gbawadutil.exe -in minitest.wad -cfile ..\source\iwad\minitest.c
