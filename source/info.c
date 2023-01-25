@@ -1527,7 +1527,7 @@ const mobjinfo_t mobjinfo[NUMMOBJTYPES] = {
     100,    // mass
     0,    // damage
     sfx_bgact,    // activesound
-    MF_SOLID|MF_SHOOTABLE|MF_COUNTKILL|MF_FRIEND, // killough |MF_TRANSLUCENT,   // flags     // phares
+    MF_SOLID|MF_SHOOTABLE|MF_COUNTKILL, // killough |MF_TRANSLUCENT,   // flags     // phares
     S_TROO_RAISE1   // raisestate
   },
 
@@ -1586,7 +1586,7 @@ const mobjinfo_t mobjinfo[NUMMOBJTYPES] = {
   {   // MT_HEAD
     3005,   // doomednum
     S_HEAD_STND,    // spawnstate
-    400,    // spawnhealth
+    1000,    // spawnhealth
     S_HEAD_RUN1,    // seestate
     sfx_cacsit,   // seesound
     8,    // reactiontime
@@ -1605,7 +1605,7 @@ const mobjinfo_t mobjinfo[NUMMOBJTYPES] = {
     400,    // mass
     0,    // damage
     sfx_dmact,    // activesound
-    MF_SOLID|MF_SHOOTABLE|MF_FLOAT|MF_NOGRAVITY|MF_COUNTKILL,   // flags
+    MF_SOLID|MF_SHOOTABLE|MF_FLOAT|MF_NOGRAVITY|MF_NOBLOOD|MF_COUNTKILL|MF_FRIEND,   // flags
     S_HEAD_RAISE1   // raisestate
   },
 
