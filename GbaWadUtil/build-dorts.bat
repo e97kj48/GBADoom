@@ -1,1 +1,0 @@
-gbawadutil.exe -in dorts.wad -cfile ..\source\iwad\dorts.c

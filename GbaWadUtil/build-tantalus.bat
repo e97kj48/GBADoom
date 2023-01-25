@@ -1,0 +1,1 @@
+gbawadutil.exe -in tantalus.wad -cfile ..\source\iwad\tantalus.c
