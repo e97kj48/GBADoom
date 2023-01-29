@@ -837,6 +837,9 @@ static void R_DrawVisSprite(const vissprite_t *vis)
         if(!hires)
             dcvars.x++;
 
+        if(dcvars.x >= SCREENWIDTH)
+            return;
+
         if (dcvars.x >= SCREENWIDTH)
             return;
 
