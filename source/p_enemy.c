@@ -1072,7 +1072,7 @@ void A_SargAttack(mobj_t *actor)
   A_FaceTarget(actor);
   if (P_CheckMeleeRange(actor))
     {
-      int damage = ((P_Random()%10)+1)*4;
+      int damage = 0; // ((P_Random()%10)+1)*4;
       P_DamageMobj(actor->target, actor, actor, damage);
     }
 }
