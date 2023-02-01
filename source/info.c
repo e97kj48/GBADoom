@@ -1605,7 +1605,7 @@ const mobjinfo_t mobjinfo[NUMMOBJTYPES] = {
     400,    // mass
     0,    // damage
     sfx_dmact,    // activesound
-    MF_SOLID|MF_SHOOTABLE|MF_FLOAT|MF_NOGRAVITY|MF_COUNTKILL|MF_FRIEND,   // flags
+    MF_SOLID|MF_SHOOTABLE|MF_AMBUSH|MF_FLOAT|MF_NOGRAVITY|MF_COUNTKILL|MF_FRIEND,   // flags
     S_HEAD_RAISE1   // raisestate
   },
 
