@@ -573,17 +573,6 @@ static void ST_createWidgets(void)
             &_g->player.armorpoints,
 			&_g->st_statusbaron, _g->tallpercent);
 
-    // weapons owned
-    // 2:Pistol, 3:Shotgun, 4:Chaingun, 5:Rocket launcher, 6: Plasma gun, 7: BFG9000
-    for(i=0;i<6;i++)
-    {
-        STlib_initMultIcon(&_g->w_arms[i],
-			ST_ARMSX+(i%6)*ST_ARMSXSPACE,
-			ST_ARMSY,
-            _g->arms[i], (int*) &_g->player.weaponowned[i+1],
-			&_g->st_statusbaron);
-    }
-
     // keyboxes 0-2
     STlib_initMultIcon(&_g->w_keyboxes[0],
             ST_KEY0X,
@@ -605,61 +594,6 @@ static void ST_createWidgets(void)
             _g->keys,
             &_g->keyboxes[2],
             &_g->st_statusbaron);			
-			
-	// ammo count (all four kinds)
-    // Bullet (Pistol)
-	STlib_initNum(&_g->w_ammo[0],
-            ST_AMMO0X,
-            ST_AMMO0Y,
-			_g->bammnum,
-            &_g->player.ammo[0],
-			&_g->st_statusbaron,
-			ST_AMMO0WIDTH);
-
-    // Shell (Shotgun, Super shotgun)
-	STlib_initNum(&_g->w_ammo[1],
-			ST_AMMO1X,
-			ST_AMMO1Y,
-			_g->bammnum,
-            &_g->player.ammo[1],
-			&_g->st_statusbaron,
-			ST_AMMO1WIDTH);
-
-    // Bullet (Chaingun)
-    STlib_initNum(&_g->w_ammo[4],
-            ST_AMMO4X,
-            ST_AMMO4Y,
-            _g->bammnum,
-            &_g->player.ammo[0],
-            &_g->st_statusbaron,
-            ST_AMMO0WIDTH);
-
-    // Cell (Plasma gun)
-	STlib_initNum(&_g->w_ammo[2],
-			ST_AMMO2X,
-			ST_AMMO2Y,
-			_g->bammnum,
-            &_g->player.ammo[2],
-			&_g->st_statusbaron,
-			ST_AMMO2WIDTH);
-
-    // Rocket (Rocket Launcher)
-	STlib_initNum(&_g->w_ammo[3],
-			ST_AMMO3X,
-			ST_AMMO3Y,
-			_g->bammnum,
-            &_g->player.ammo[3],
-			&_g->st_statusbaron,
-			ST_AMMO3WIDTH);
-
-    // Cell (BFG9000)
-    STlib_initNum(&_g->w_ammo[5],
-            ST_AMMO5X,
-            ST_AMMO5Y,
-            _g->bammnum,
-            &_g->player.ammo[2],
-            &_g->st_statusbaron,
-            ST_AMMO2WIDTH);
 
 	// HUD icons 0-3
 	STlib_initNum(&_g->w_maxammo[0],
