@@ -603,7 +603,7 @@ const state_t states[NUMSTATES] = {
   {SPR_SARG,10,5,NULL,S_SARG_RAISE5,0,0}, // S_SARG_RAISE4
   {SPR_SARG,9,5,NULL,S_SARG_RAISE6,0,0},  // S_SARG_RAISE5
   {SPR_SARG,8,5,NULL,S_SARG_RUN1,0,0},  // S_SARG_RAISE6
-  {SPR_HEAD,0,10,A_Look,S_HEAD_STND,0,0}, // S_HEAD_STND
+  {SPR_HEAD,0,10,NULL,S_HEAD_STND,0,0}, // S_HEAD_STND
   {SPR_HEAD,0,3,A_Chase,S_HEAD_RUN1,0,0}, // S_HEAD_RUN1
   {SPR_HEAD,1,5,A_FaceTarget,S_HEAD_ATK2,0,0},  // S_HEAD_ATK1
   {SPR_HEAD,2,5,A_FaceTarget,S_HEAD_ATK3,0,0},  // S_HEAD_ATK2
@@ -1605,7 +1605,7 @@ const mobjinfo_t mobjinfo[NUMMOBJTYPES] = {
     400,    // mass
     0,    // damage
     sfx_dmact,    // activesound
-    MF_SOLID|MF_SHOOTABLE|MF_AMBUSH|MF_FLOAT|MF_NOGRAVITY|MF_COUNTKILL|MF_FRIEND,   // flags
+    MF_SOLID|MF_SHOOTABLE|MF_FLOAT|MF_NOGRAVITY|MF_COUNTKILL|MF_FRIEND,   // flags
     S_HEAD_RAISE1   // raisestate
   },
 

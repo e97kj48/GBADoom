@@ -59,7 +59,7 @@
 // strings used in dehacked.
 
 const int initial_health = 100;
-const int initial_bullets = 50;
+const int initial_bullets = 0;
 const int maxhealth = 100; // was MAXHEALTH as a #define, used only in this module
 const int max_armor = 200;
 const int green_armor_class = 1;  // these are involved with armortype below

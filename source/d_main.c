@@ -318,11 +318,6 @@ static void D_UpdateFPS()
 }
 
 //
-//  DEMO LOOP
-//
-
-
-//
 // D_PageTicker
 // Handles timing for warped projection
 //
