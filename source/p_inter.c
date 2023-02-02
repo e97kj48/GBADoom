@@ -820,7 +820,7 @@ void P_DamageMobj(mobj_t *target,mobj_t *inflictor, mobj_t *source, int damage)
 
   /* killough 11/98: Don't attack a friend, unless hit by that friend.
    * cph 2006/04/01 - implicitly this is only if mbf_features */
-  if (justhit && (target->target == source || !target->target ||
-      !(target->flags & target->target->flags & MF_FRIEND)))
-    target->flags |= MF_JUSTHIT;    // fight back!
+  //if (justhit && (target->target == source || !target->target ||
+  //    !(target->flags & target->target->flags & MF_FRIEND)))
+  //  target->flags |= MF_JUSTHIT;    // fight back!
 }
