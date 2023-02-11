@@ -100,14 +100,14 @@ const char * const sprnames[NUMSPRITES+1] = {
 // parts where frame rewiring is done for more details and the
 // extended way a BEX file can handle this.
 
-const state_t states[NUMSTATES] = {
+const state_t states[NUMSTATES] = {                 // Sprite, Subframe, Duration, Action, Next State, Unused
   {SPR_TROO,0,-1,NULL,S_NULL,0,0},  // S_NULL
   {SPR_SHTG,4,0,A_Light0,S_NULL,0,0}, // S_LIGHTDONE
   {SPR_PUNG,0,1,A_WeaponReady,S_PUNCH,0,0}, // S_PUNCH
   {SPR_PUNG,0,1,A_Lower,S_PUNCHDOWN,0,0}, // S_PUNCHDOWN
   {SPR_PUNG,0,1,A_Raise,S_PUNCHUP,0,0}, // S_PUNCHUP
   {SPR_PUNG,1,4,NULL,S_PUNCH2,0,0},   // S_PUNCH1
-  {SPR_PUNG,2,4,A_Punch,S_PUNCH3,0,0},  // S_PUNCH2
+  {SPR_PUNG,2,4,A_Punch,S_PUNCH3,0,0},  // S_PUNCH2 (006)
   {SPR_PUNG,3,5,NULL,S_PUNCH4,0,0},   // S_PUNCH3
   {SPR_PUNG,2,4,NULL,S_PUNCH5,0,0},   // S_PUNCH4
   {SPR_PUNG,1,5,A_ReFire,S_PUNCH,0,0},  // S_PUNCH5
@@ -576,8 +576,8 @@ const state_t states[NUMSTATES] = {
   {SPR_TROO,10,6,NULL,S_TROO_RAISE4,0,0}, // S_TROO_RAISE3
   {SPR_TROO,9,6,NULL,S_TROO_RAISE5,0,0},  // S_TROO_RAISE4
   {SPR_TROO,8,6,NULL,S_TROO_RUN1,0,0},  // S_TROO_RAISE5
-  {SPR_SARG,0,10,A_Look,S_SARG_STND2,0,0},  // S_SARG_STND
-  {SPR_SARG,1,10,A_Look,S_SARG_STND,0,0}, // S_SARG_STND2
+  {SPR_SARG,0,10,NULL,S_SARG_STND2,0,0},  // S_SARG_STND
+  {SPR_SARG,1,10,NULL,S_SARG_STND,0,0}, // S_SARG_STND2
   {SPR_SARG,0,2,A_Chase,S_SARG_RUN2,0,0}, // S_SARG_RUN1
   {SPR_SARG,0,2,A_Chase,S_SARG_RUN3,0,0}, // S_SARG_RUN2
   {SPR_SARG,1,2,A_Chase,S_SARG_RUN4,0,0}, // S_SARG_RUN3
@@ -588,9 +588,9 @@ const state_t states[NUMSTATES] = {
   {SPR_SARG,3,2,A_Chase,S_SARG_RUN1,0,0}, // S_SARG_RUN8
   {SPR_SARG,4,8,A_FaceTarget,S_SARG_ATK2,0,0},  // S_SARG_ATK1
   {SPR_SARG,5,8,A_FaceTarget,S_SARG_ATK3,0,0},  // S_SARG_ATK2
-  {SPR_SARG,6,8,A_SargAttack,S_SARG_RUN1,0,0},  // S_SARG_ATK3
-  {SPR_SARG,7,2,NULL,S_SARG_PAIN2,0,0}, // S_SARG_PAIN
-  {SPR_SARG,7,2,A_Pain,S_SARG_RUN1,0,0},  // S_SARG_PAIN2
+  {SPR_SARG,6,8,A_SargAttack,S_SARG_RUN1,0,0},  // S_SARG_ATK3 (487)
+  {SPR_SARG,7,10,NULL,S_SARG_PAIN2,0,0}, // S_SARG_PAIN
+  {SPR_SARG,7,10,A_FaceTarget,S_SARG_RUN1,0,0},  // S_SARG_PAIN2
   {SPR_SARG,8,8,NULL,S_SARG_DIE2,0,0},  // S_SARG_DIE1
   {SPR_SARG,9,8,A_Scream,S_SARG_DIE3,0,0},  // S_SARG_DIE2
   {SPR_SARG,10,4,NULL,S_SARG_DIE4,0,0}, // S_SARG_DIE3
@@ -610,7 +610,7 @@ const state_t states[NUMSTATES] = {
   {SPR_HEAD,32771,5,A_SargAttack,S_HEAD_RUN1,0,0},  // S_HEAD_ATK3
   {SPR_HEAD,4,10,A_FaceTarget,S_HEAD_PAIN2,0,0}, // S_HEAD_PAIN
   {SPR_HEAD,4,10,A_FaceTarget,S_HEAD_PAIN3,0,0}, // S_HEAD_PAIN2 (508)
-  {SPR_HEAD,5,5,NULL,S_HEAD_RUN1,0,0},  // S_HEAD_PAIN3
+  {SPR_HEAD,5,10,NULL,S_HEAD_RUN1,0,0},  // S_HEAD_PAIN3
   {SPR_HEAD,6,8,NULL,S_HEAD_DIE2,0,0},  // S_HEAD_DIE1
   {SPR_HEAD,7,8,A_Scream,S_HEAD_DIE3,0,0},  // S_HEAD_DIE2
   {SPR_HEAD,8,8,NULL,S_HEAD_DIE4,0,0},  // S_HEAD_DIE3
@@ -1534,13 +1534,13 @@ const mobjinfo_t mobjinfo[NUMMOBJTYPES] = {
   {   // MT_SERGEANT, Demon
     3002,   // doomednum
     S_SARG_STND,    // spawnstate
-    150,    // spawnhealth
+    4000,    // spawnhealth
     S_SARG_RUN1,    // seestate
     sfx_sgtsit,   // seesound
     8,    // reactiontime
     sfx_sgtatk,   // attacksound
     S_SARG_PAIN,    // painstate
-    180,    // painchance
+    256,    // painchance
     sfx_dmpain,   // painsound
     S_SARG_ATK1,    // meleestate
     0,    // missilestate
@@ -1553,7 +1553,7 @@ const mobjinfo_t mobjinfo[NUMMOBJTYPES] = {
     400,    // mass
     0,    // damage
     sfx_dmact,    // activesound
-    MF_SOLID|MF_SHOOTABLE|MF_COUNTKILL,   // flags
+    MF_SOLID|MF_SHOOTABLE|MF_NOBLOOD|MF_FRIEND,   // flags
     S_SARG_RAISE1   // raisestate
   },
 

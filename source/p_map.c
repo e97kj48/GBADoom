@@ -1122,7 +1122,7 @@ boolean PTR_ShootTraverse (intercept_t* in)
 
     // Spawn bullet puffs.
 
-    P_SpawnPuff (x,y,z);
+    P_SpawnBlood (x, y, z, _g->la_damage);
 
     // don't go any farther
 

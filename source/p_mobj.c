@@ -874,7 +874,6 @@ void P_SpawnPuff(fixed_t x,fixed_t y,fixed_t z)
   // killough 5/5/98: remove dependence on order of evaluation:
   int t = P_Random();
   z += (t - P_Random())<<10;
-
   th = P_SpawnMobj (x,y,z, MT_PUFF);
   th->momz = FRACUNIT;
   th->tics -= P_Random()&3;
@@ -883,9 +882,8 @@ void P_SpawnPuff(fixed_t x,fixed_t y,fixed_t z)
     th->tics = 1;
 
   // don't make punches spark on the wall
-
-  if (_g->attackrange == MELEERANGE)
-    P_SetMobjState (th, S_PUFF3);
+  // if (_g->attackrange == MELEERANGE)
+  //  P_SetMobjState (th, S_PUFF3);
   }
 
 
