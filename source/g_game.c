@@ -737,45 +737,7 @@ void G_DoCompleted (void)
                 _g->wminfo.next = _g->gamemap;          // go to next level
     }
 
-    _g->wminfo.maxkills = _g->totalkills;
-    _g->wminfo.maxitems = _g->totalitems;
-    _g->wminfo.maxsecret = _g->totalsecret;
-
-    if ( _g->gamemode == commercial )
-        _g->wminfo.partime = TICRATE*cpars[_g->gamemap-1];
-    else
-        _g->wminfo.partime = TICRATE*pars[_g->gameepisode][_g->gamemap];
-
-    _g->wminfo.pnum = 0;
-
-
-    _g->wminfo.plyr[0].in = _g->playeringame;
-    _g->wminfo.plyr[0].skills = _g->player.killcount;
-    _g->wminfo.plyr[0].sitems = _g->player.itemcount;
-    _g->wminfo.plyr[0].ssecret = _g->player.secretcount;
-    _g->wminfo.plyr[0].stime = _g->leveltime;
-
-    /* cph - modified so that only whole seconds are added to the totalleveltimes
-   *  value; so our total is compatible with the "naive" total of just adding
-   *  the times in seconds shown for each level. Also means our total time
-   *  will agree with Compet-n.
-   */
-    _g->wminfo.totaltimes = (_g->totalleveltimes += (_g->leveltime - _g->leveltime%35));
-
-    _g->gamestate = GS_INTERMISSION;
-    _g->automapmode &= ~am_active;
-
-    // lmpwatch.pl engine-side demo testing support
-    // print "FINISHED: <mapname>" when the player exits the current map
-    if (nodrawers && (_g->demoplayback || _g->timingdemo))
-    {
-        if (_g->gamemode == commercial)
-            lprintf(LO_INFO, "FINISHED: MAP%02d\n", _g->gamemap);
-        else
-            lprintf(LO_INFO, "FINISHED: E%dM%d\n", _g->gameepisode, _g->gamemap);
-    }
-
-    WI_Start (&_g->wminfo);
+    G_WorldDone();
 }
 
 //

@@ -143,7 +143,7 @@ enum
   newgame = 0,
   loadgame,
   savegame,
-  options,
+  endgame,
   main_end
 };
 
@@ -158,9 +158,9 @@ enum
 static const menuitem_t MainMenu[]=
 {
   {1,"M_NGAME", M_NewGame},
-  {1,"M_OPTION",M_Options},
   {1,"M_LOADG", M_LoadGame},
   {1,"M_SAVEG", M_SaveGame},
+  {1,"M_ENDGAM", M_EndGame},
 };
 
 static const menu_t MainDef =
@@ -568,8 +568,7 @@ void M_SaveGame (int choice)
 // numerical values for the Options menu items
 
 enum
-{                                                   // phares 3/21/98
-  endgame,
+{
   messages,
   alwaysrun,
   detail,
@@ -583,7 +582,6 @@ enum
 static const menuitem_t OptionsMenu[]=
 {
   // killough 4/6/98: move setup to be a sub-menu of OPTIONs
-  {1,"M_ENDGAM", M_EndGame},
   {1,"M_MESSG",  M_ChangeMessages},
   {1,"M_ARUN",   M_ChangeAlwaysRun},
   {1,"M_DETAIL", M_ChangeDetail},

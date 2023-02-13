@@ -368,7 +368,7 @@ static void D_DrawTitle1(const char *name)
 
 static void D_DrawTitle2(const char *name)
 {
-    S_StartMusic(mus_dm2ttl);
+    S_StartMusic(mus_runnin);
     D_SetPageName(name);
 }
 
