@@ -1066,6 +1066,18 @@ void P_CrossSpecialLine(const line_t *line, int side, mobj_t *thing)
 {
   int         ok;
 
+  // Player does not trigger lines
+  if (P_MobjIsPlayer(thing))
+  {
+      switch (thing->type)
+      {
+      case MT_PLAYER:
+          return;
+
+      default: break;
+      }
+  }
+
   //  Things that should never trigger lines
   if (!P_MobjIsPlayer(thing))
   {

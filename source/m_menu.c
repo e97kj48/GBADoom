@@ -317,14 +317,17 @@ void M_DrawNewGame(void)
 
 void M_NewGame(int choice)
 {
-    if ( _g->gamemode == commercial )
-    {
-		M_SetupNextMenu(&NewDef);
-		_g->itemOn = 2; //Set hurt me plenty as default difficulty
-	}else if( (_g->gamemode == shareware) || (_g->gamemode == registered) )
-        M_SetupNextMenu(&EpiDef3);
-    else
-        M_SetupNextMenu(&EpiDef);
+    G_DeferedInitNew(3, _g->epi + 1, 1);
+    M_ClearMenus();
+
+//    if ( _g->gamemode == commercial )
+//    {
+//		M_SetupNextMenu(&NewDef);
+//		_g->itemOn = 2; //Set hurt me plenty as default difficulty
+//	}else if( (_g->gamemode == shareware) || (_g->gamemode == registered) )
+//        M_SetupNextMenu(&EpiDef3);
+//    else
+//        M_SetupNextMenu(&EpiDef);
 }
 
 // CPhipps - static
