@@ -131,19 +131,19 @@
 #define ST_FRAGSY               (ST_Y+3)
 #define ST_FRAGSWIDTH           2
 
-// Key icon positions.
-#define ST_KEY0WIDTH            8
-#define ST_KEY0HEIGHT           5
-#define ST_KEY0X                (ST_X+178)
-#define ST_KEY0Y                (ST_Y+3)
+// Key icon positions (from top right corner of sprite)
+#define ST_KEY0WIDTH            16
+#define ST_KEY0HEIGHT           10
+#define ST_KEY0X                92
+#define ST_KEY0Y                8
 
 #define ST_KEY1WIDTH            ST_KEY0WIDTH
-#define ST_KEY1X                (ST_X+178)
-#define ST_KEY1Y                (ST_Y+13)
+#define ST_KEY1X                112
+#define ST_KEY1Y                8
 
 #define ST_KEY2WIDTH            ST_KEY0WIDTH
-#define ST_KEY2X                (ST_X+178)
-#define ST_KEY2Y                (ST_Y+23)
+#define ST_KEY2X                132
+#define ST_KEY2Y                8
 
 
 // Ammunition counter positions (top right)

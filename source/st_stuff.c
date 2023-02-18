@@ -548,30 +548,30 @@ static void ST_createWidgets(void)
     int i;
 
     // ready weapon ammo
-    STlib_initNum(&_g->w_ready,
-		ST_AMMOX,
-		ST_AMMOY,
-		_g->tallnum,
-        &_g->player.ammo[weaponinfo[_g->player.readyweapon].ammo],
-		&_g->st_statusbaron,
-		ST_AMMOWIDTH );
+//    STlib_initNum(&_g->w_ready,
+//		ST_AMMOX,
+//		ST_AMMOY,
+//		_g->tallnum,
+//        &_g->player.ammo[weaponinfo[_g->player.readyweapon].ammo],
+//		&_g->st_statusbaron,
+//		ST_AMMOWIDTH );
 
     // health percentage
-    STlib_initPercent(&_g->st_health,
-			ST_HEALTHX,
-			ST_HEALTHY,
-			_g->tallnum,
-            &_g->player.health,
-			&_g->st_statusbaron,
-			_g->tallpercent);
+//    STlib_initPercent(&_g->st_health,
+//			ST_HEALTHX,
+//			ST_HEALTHY,
+//			_g->tallnum,
+//            &_g->player.health,
+//			&_g->st_statusbaron,
+//			_g->tallpercent);
 					  
     // armor percentage - should be colored later
-    STlib_initPercent(&_g->st_armor,
-			ST_ARMORX,
-			ST_ARMORY,
-			_g->tallnum,
-            &_g->player.armorpoints,
-			&_g->st_statusbaron, _g->tallpercent);
+//    STlib_initPercent(&_g->st_armor,
+//			ST_ARMORX,
+//			ST_ARMORY,
+//			_g->tallnum,
+//            &_g->player.armorpoints,
+//			&_g->st_statusbaron, _g->tallpercent);
 
     // keyboxes 0-2
     STlib_initMultIcon(&_g->w_keyboxes[0],
@@ -596,29 +596,29 @@ static void ST_createWidgets(void)
             &_g->st_statusbaron);			
 
 	// HUD icons 0-3
-	STlib_initNum(&_g->w_maxammo[0],
-			ST_MAXAMMO0X,
-			ST_MAXAMMO0Y,
-			_g->iconnum,
-            &_g->st_icon[0],
-			&_g->st_statusbaron,
-			ST_MAXAMMO0WIDTH);
+//	STlib_initNum(&_g->w_maxammo[0],
+//			ST_MAXAMMO0X,
+//			ST_MAXAMMO0Y,
+//			_g->iconnum,
+//            &_g->st_icon[0],
+//			&_g->st_statusbaron,
+//			ST_MAXAMMO0WIDTH);
 
-	STlib_initNum(&_g->w_maxammo[1],
-			ST_MAXAMMO1X,
-			ST_MAXAMMO1Y,
-			_g->iconnum,
-            &_g->st_icon[1],
-			&_g->st_statusbaron,
-			ST_MAXAMMO1WIDTH);
+//	STlib_initNum(&_g->w_maxammo[1],
+//			ST_MAXAMMO1X,
+//			ST_MAXAMMO1Y,
+//			_g->iconnum,
+//            &_g->st_icon[1],
+//			&_g->st_statusbaron,
+//			ST_MAXAMMO1WIDTH);
 
-	STlib_initNum(&_g->w_maxammo[2],
-			ST_MAXAMMO2X,
-			ST_MAXAMMO2Y,
-			_g->iconnum,
-            &_g->st_icon[2],
-			&_g->st_statusbaron,
-			ST_MAXAMMO2WIDTH);
+//	STlib_initNum(&_g->w_maxammo[2],
+//			ST_MAXAMMO2X,
+//			ST_MAXAMMO2Y,
+//			_g->iconnum,
+//            &_g->st_icon[2],
+//			&_g->st_statusbaron,
+//			ST_MAXAMMO2WIDTH);
 
     // Unused 4th HUD icon ~e9
 //	STlib_initNum(&_g->w_maxammo[3],
@@ -630,12 +630,12 @@ static void ST_createWidgets(void)
 //			ST_MAXAMMO3WIDTH);
 			
     // faces
-    STlib_initMultIcon(&_g->w_faces,
-			ST_FACESX,
-			ST_FACESY,
-			_g->faces,
-			&_g->st_faceindex,
-			&_g->st_statusbaron);
+//    STlib_initMultIcon(&_g->w_faces,
+//			ST_FACESX,
+//			ST_FACESY,
+//			_g->faces,
+//			&_g->st_faceindex,
+//			&_g->st_statusbaron);
 }
 
 static boolean st_stopped = true;
