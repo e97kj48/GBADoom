@@ -548,13 +548,13 @@ static void ST_createWidgets(void)
     int i;
 
     // ready weapon ammo
-//    STlib_initNum(&_g->w_ready,
-//		ST_AMMOX,
-//		ST_AMMOY,
-//		_g->tallnum,
-//        &_g->player.ammo[weaponinfo[_g->player.readyweapon].ammo],
-//		&_g->st_statusbaron,
-//		ST_AMMOWIDTH );
+    STlib_initNum(&_g->w_ready,
+		ST_AMMOX,
+		ST_AMMOY,
+		_g->tallnum,
+        &_g->player.ammo[weaponinfo[_g->player.readyweapon].ammo],
+		&_g->st_statusbaron,
+		ST_AMMOWIDTH );
 
     // health percentage
 //    STlib_initPercent(&_g->st_health,

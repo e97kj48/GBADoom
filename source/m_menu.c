@@ -64,7 +64,7 @@ static void (*messageRoutine)(int response);
 
 // we are going to be entering a savegame string
 
-#define SKULLXOFF  -32
+#define SKULLXOFF  -25
 #define LINEHEIGHT  16
 
 // graphic name of skulls
@@ -168,7 +168,7 @@ static const menu_t MainDef =
   main_end,       // number of menu items
   MainMenu,       // table that defines menu items
   M_DrawMainMenu, // drawing routine
-  97,64,          // initial cursor position
+  74,79,          // initial cursor position
   NULL,0,
 };
 
@@ -179,7 +179,7 @@ static const menu_t MainDef =
 void M_DrawMainMenu(void)
 {
   // CPhipps - patch drawing updated
-  V_DrawNamePatch(94, 2, 0, "M_DOOM", CR_DEFAULT, VPT_STRETCH);
+  V_DrawNamePatch(39, 15, 0, "M_DOOM", CR_DEFAULT, VPT_STRETCH);
 }
 
 /////////////////////////////
@@ -1092,7 +1092,7 @@ void M_Drawer (void)
             // DRAW SKULL
 
             // CPhipps - patch drawing updated
-            V_DrawNamePatch(x + SKULLXOFF, _g->currentMenu->y - 5 + _g->itemOn*LINEHEIGHT,0,
+            V_DrawNamePatch(x + SKULLXOFF, _g->currentMenu->y - 1 + _g->itemOn*LINEHEIGHT,0,
                             skullName[_g->whichSkull], CR_DEFAULT, VPT_STRETCH);
         }
 }
@@ -1126,7 +1126,7 @@ void M_Ticker (void)
   if (--_g->skullAnimCounter <= 0)
     {
       _g->whichSkull ^= 1;
-      _g->skullAnimCounter = 8;
+      _g->skullAnimCounter = 16;
     }
 }
 

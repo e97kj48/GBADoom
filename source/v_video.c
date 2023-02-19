@@ -95,10 +95,10 @@ void V_DrawPatch(int x, int y, int scrn, const patch_t* patch)
 
     int   col = 0;
 
-    const int   DX  = (240<<FRACBITS) / 320;
-    const int   DXI = (320<<FRACBITS) / 240;
-    const int   DY  = ((SCREENHEIGHT<<FRACBITS)+(FRACUNIT-1)) / 200;
-    const int   DYI = (200<<FRACBITS) / SCREENHEIGHT;
+    const int   DX  = (240<<FRACBITS) / 240;
+    const int   DXI = (240<<FRACBITS) / 240;
+    const int   DY  = ((SCREENHEIGHT<<FRACBITS)+(FRACUNIT-1)) / 160;
+    const int   DYI = (160<<FRACBITS) / SCREENHEIGHT;
 
     byte* byte_topleft = (byte*)_g->screens[scrn].data;
     const int byte_pitch = (SCREENPITCH * 2);

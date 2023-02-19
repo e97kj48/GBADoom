@@ -93,8 +93,8 @@ typedef enum {
 // For resize of screen, at start of game.
 //
 
-#define BASE_WIDTH 320
-#define BASE_HEIGHT 200
+#define BASE_WIDTH 240
+#define BASE_HEIGHT 160
 
 
 // It is educational but futile to change this

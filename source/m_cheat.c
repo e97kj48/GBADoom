@@ -49,7 +49,7 @@ static const c_cheat cheat_def[] =
     {"Exit Level",      CHEAT_SEQ(KEYD_LEFT,KEYD_R,     KEYD_LEFT,  KEYD_L,     KEYD_B,     KEYD_LEFT,      KEYD_RIGHT,     KEYD_A),        cheat_exit},
     //Because Goldeneye!
     {"Enemy Rockets",   CHEAT_SEQ(KEYD_A,   KEYD_B,     KEYD_L,     KEYD_R,     KEYD_R,     KEYD_L,         KEYD_B,         KEYD_A),        cheat_rockets},
-	{"FPS Counter Ammo",CHEAT_SEQ(KEYD_UP,  KEYD_UP,    KEYD_UP,    KEYD_UP,    KEYD_UP,    KEYD_UP,        KEYD_UP,        KEYD_A),        cheat_fps},
+	{"FPS Counter Ammo",CHEAT_SEQ(KEYD_LEFT,  KEYD_LEFT,    KEYD_LEFT,    KEYD_LEFT,    KEYD_LEFT,    KEYD_LEFT,        KEYD_LEFT,        KEYD_A),        cheat_fps},
 };
 
 static const unsigned int num_cheats = sizeof(cheat_def) / sizeof (c_cheat);
