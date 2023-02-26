@@ -369,7 +369,6 @@ enum
     load5,
     load6,
     load7,
-    load8,
     load_end
 };
 
@@ -384,7 +383,6 @@ static const menuitem_t LoadMenue[]=
     {1,"", M_LoadSelect},
     {1,"", M_LoadSelect},
     {1,"", M_LoadSelect},
-    {1,"", M_LoadSelect},
 };
 
 static const menu_t LoadDef =
@@ -392,11 +390,11 @@ static const menu_t LoadDef =
   load_end,
   LoadMenue,
   M_DrawLoad,
-  64,34, //jff 3/15/98 move menu up
+  64,31,  // Initial cursor position
   &MainDef,2,
 };
 
-#define LOADGRAPHIC_Y 8
+#define LOADGRAPHIC_Y 8  // "Load Game" 8 pixels from the top
 
 //
 // M_LoadGame & Cie.
@@ -406,14 +404,12 @@ void M_DrawLoad(void)
 {
     int i;
 
-    //jff 3/15/98 use symbolic load position
-    // CPhipps - patch drawing updated
-    V_DrawNamePatch(72 ,LOADGRAPHIC_Y, 0, "M_LOADG", CR_DEFAULT, VPT_STRETCH);
+    V_DrawNamePatch(74 ,LOADGRAPHIC_Y, 0, "M_LOADG", CR_DEFAULT, VPT_STRETCH);
 
     for (i = 0 ; i < load_end ; i++)
     {
-        M_DrawSaveLoadBorder(LoadDef.x,27+13*i);
-        M_WriteText(LoadDef.x,27+13*i,_g->savegamestrings[i]);
+        M_DrawSaveLoadBorder(75,35+16*i);  // Each row is 16px apart
+        M_WriteText(75,35+16*i,_g->savegamestrings[i]);
     }
 }
 
@@ -482,7 +478,6 @@ const static menuitem_t SaveMenu[]=
   {1,"", M_SaveSelect},
   {1,"", M_SaveSelect},
   {1,"", M_SaveSelect},
-  {1,"", M_SaveSelect}, //jff 3/15/98 extend number of slots
   {1,"", M_SaveSelect},
 };
 
@@ -491,7 +486,7 @@ const static menu_t SaveDef =
   load_end, // same number of slots as the Load Game screen
   SaveMenu,
   M_DrawSave,
-  80,34, //jff 3/15/98 move menu up
+  64,31,
   &MainDef,3,
 };
 
@@ -511,14 +506,12 @@ void M_DrawSave(void)
 {
     int i;
 
-    //jff 3/15/98 use symbolic load position
-    // CPhipps - patch drawing updated
-    V_DrawNamePatch(72, LOADGRAPHIC_Y, 0, "M_SAVEG", CR_DEFAULT, VPT_STRETCH);
+    V_DrawNamePatch(74, LOADGRAPHIC_Y, 0, "M_SAVEG", CR_DEFAULT, VPT_STRETCH);
 
     for (i = 0 ; i < load_end ; i++)
     {
-        M_DrawSaveLoadBorder(LoadDef.x,27+13*i);
-        M_WriteText(LoadDef.x,27+13*i,_g->savegamestrings[i]);
+        M_DrawSaveLoadBorder(75,35+16*i);
+        M_WriteText(75,35+16*i,_g->savegamestrings[i]);
     }
 }
 
