@@ -759,9 +759,9 @@ void G_WorldDone (void)
         case 31:
             if (!_g->secretexit)
                 break;
-        case 6:
-        case 11:
-        case 20:
+        case 2:
+        case 3:
+        case 4:
         case 30:
             F_StartFinale ();
             break;

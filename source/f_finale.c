@@ -121,17 +121,17 @@ void F_StartFinale (void)
             // Ty 08/27/98 - added the gamemission logic
             switch (_g->gamemap)
             {
-                case 6:
+                case 2:
                     _g->finaleflat = "SLIME16";
                     _g->finaletext = (_g->gamemission==pack_tnt)  ? T1TEXT :
                                                                     (_g->gamemission==pack_plut) ? P1TEXT : C1TEXT;
                     break;
-                case 11:
+                case 3:
                     _g->finaleflat = "RROCK14";
                     _g->finaletext = (_g->gamemission==pack_tnt)  ? T2TEXT :
                                                                     (_g->gamemission==pack_plut) ? P2TEXT : C2TEXT;
                     break;
-                case 20:
+                case 4:
                     _g->finaleflat = "RROCK07";
                     _g->finaletext = (_g->gamemission==pack_tnt)  ? T3TEXT :
                                                                     (_g->gamemission==pack_plut) ? P3TEXT : C3TEXT;
